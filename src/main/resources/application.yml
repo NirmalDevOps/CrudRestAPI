@@ -1,0 +1,37 @@
+server:
+  port: 7070
+spring:
+  datasource:
+    url: jdbc:h2:mem:product
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  # JPA Configuration
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+    properties:
+      hibernate:
+        #dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+
+  #enabling the H2 console
+  h2:
+    console:
+      enabled: true
+
+  # JPA Configuration
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#    show-sql: true
+#    defer-datasource-initialization: true
+#
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#        format_sql : true
